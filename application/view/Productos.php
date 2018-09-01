@@ -1,5 +1,4 @@
 <form id="crear_producto">
-   //hola
     <div id="margen">
         <div id="informacion">
             <input style="margin-left: 95%;" type="button" value="Atras" id="atras_p">
