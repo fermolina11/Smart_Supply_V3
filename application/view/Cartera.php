@@ -12,7 +12,7 @@
                         ?>
                     </datalist>
         <input type="reset" value="Limpiar" id="limpiar_c">
-        <!-- comentario prueba -->
+    
 
         <div>
             <label>Nombre cliente:</label> <br>
