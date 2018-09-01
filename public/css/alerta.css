@@ -1,0 +1,20 @@
+.popupunder{
+    width: 300px;
+	position:fixed;
+	top: 10px;
+	right: 10px;
+	z-index: 10;
+	border: 0;
+	padding: 20px;
+    display: none;
+    font-size: 20px;
+    text-align: center;
+}
+
+.popupunder .close{
+	font-size: 10px;
+	position:absolute !important;
+	right: 2px;
+	top: 3px;
+    cursor: pointer;
+}

@@ -1,0 +1,141 @@
+#crear_producto,
+#crear_detalle,
+#modificar_c,
+#modificar_p,
+.alert{
+    display: none;
+}
+
+/* INPUTS */
+input[type=text],
+#cedula,
+input[type=number],
+select
+{
+    background-size: 25%;
+    outline: none;
+    padding: 10px 15px;
+    color: black;
+    border: none;
+    border-radius: 2px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0 0 20px 0;
+    transition: all .5s ease;
+    border-color: black;
+}
+
+/* TABLA */
+table {
+    background: rgba(255, 255, 255, .5);
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    border-color: black;
+    width: 100%;
+}
+
+table th {
+    background: #2a5886;
+    border: 1px #dddddd;
+    text-align: center;
+    padding: 10px 15px;
+}
+
+table td {
+    color: black;
+    text-align: center;
+    padding: 5px 10px;
+}
+
+table tr:hover td {
+    background: rgba(128, 128, 128, 0.5);
+    color: white;
+}
+
+table #editar_p,
+table #editar_c{
+    background-size: 100%;
+    padding: 15px;
+    border-radius: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-color: transparent;
+    cursor: pointer;
+    color: white;
+    background-color: dodgerblue;
+    text-align: center;
+}
+
+table #Estado_p,
+table #Estado_d,
+table #Estado_c{
+    background-size: 100%;
+    padding: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    border-color: transparent;
+    cursor: pointer;
+    color: white;
+    background-color: darkred;
+}
+
+table #asignar{
+    background-size: 100%;
+    padding: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    border-color: transparent;
+    cursor: pointer;
+    color: white;
+    background-color: saddlebrown;
+}
+
+#cancelar,
+#volver,
+#retroceder,
+#cerrar,
+#limpiar_c,
+#limpiar_d,
+#atras_p{
+    background: darkgray;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    font-weight: normal;
+    font-family: Roboto;
+    letter-spacing: 1px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 0 0 10px 0;
+    transition: all 0.5s ease;
+    border-radius: 10px;
+}
+
+#agregar,
+#ver_cartera,
+#guardar,
+#añadir,
+#cambios,
+#crear_p,
+#crear_c,
+#inicio,
+#consulta_mov,
+#consulta_c,
+#guardar_mv,
+#guardar_c,
+#cambios_m,
+#modificar_c,
+#modificar_p{
+    background-size: 100%;
+    padding: 5px;
+    background-color: seagreen;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 3px;
+    border-color: transparent;
+    cursor: pointer;
+    color: white;
+}
