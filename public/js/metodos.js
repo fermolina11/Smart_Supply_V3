@@ -2,8 +2,6 @@ var id;
 var proveedores;
 var contador = 0;
 
-$(buscar_detalle(), buscar_categoria(), buscar_movimientos(),validar());
-
 //Movimientos
 function buscar_movimientos(consulta, consulta2) {
     $.ajax({
@@ -459,24 +457,4 @@ function cerrar() {
         .fail(function () {
             console.log("error");
         });
-}
-
-//Menu
-function validar() {
-    if ($('#session').html() == "Admin") {
-        $('#1').attr("disabled", false);
-        $('#2').attr("disabled", false);
-        $('#3').attr("disabled", false);
-        $('#4').attr("disabled", false);
-    } else if ($('#session').html() == "Bodega") {
-        $('#1').attr("disabled", false);
-        $('#2').attr("disabled", false);
-        $('#3').attr("disabled", false);
-        $('#4').attr("disabled", true);
-    }else if ($('#session').html() == "Cliente") {
-        $('#1').attr("disabled", true);
-        $('#2').attr("disabled", false);
-        $('#3').attr("disabled", true);
-        $('#4').attr("disabled", true);
-    }
 }

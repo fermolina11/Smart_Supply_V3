@@ -1,10 +1,10 @@
 //inputs Number
-$(document).on('keypress', '#cantidad_p,#stock_p,#precio_p', function () {
+$(document).on('keypress', 'input[type=number]', function () {
     if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;
 });
 
 //input Text
-$(document).on('keypress', '#nombre_p,#nombre_c,#nombre_d,#cedula', function (key) {
+$(document).on('keypress', 'input[type=text],input[type=password]', function (key) {
     if ((key.charCode < 97 || key.charCode > 122) //letras mayusculas
         &&
         (key.charCode < 65 || key.charCode > 90) //letras minusculas

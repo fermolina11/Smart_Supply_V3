@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="<?= URL ?>/public/css/font-awesome.css">
     <link rel="stylesheet" href="<?= URL ?>/public/css/bootstrap-yeti.css">
     <link rel="stylesheet" href="<?= URL ?>/public/css/Login.css">
     <link rel="stylesheet" href="<?= URL ?>/public/css/alerta.css">
@@ -64,14 +63,12 @@
 
     <script>
         var uri = "<?=URL?>";
-
     </script>
 
     <script type="text/javascript" src="<?= URL?>/public/js/jquery.min.js"></script>
     <script type="text/javascript" src="<?= URL?>/public/js/main.js"></script>
     <script type="text/javascript" src="<?= URL?>/public/js/metodos.js"></script>
     <script type="text/javascript" src="<?= URL?>/public/js/alertas.js"></script>
-    <script type="text/javascript" src="<?= URL?>/public/js/load.js"></script>
     <script type="text/javascript" src="<?= URL?>/public/js/jquery.js"></script>
     <script type="text/javascript" src="<?= URL?>/public/js/loginjs.js"></script>
     <script type="text/javascript" src="<?= URL?>/public/js/bootstrap.js"></script>

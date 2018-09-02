@@ -49,7 +49,7 @@ class DetalleController {
                     ".$value->nombre_producto."
                 </td>
                 <td>
-                    ".$value->nombre_proveedor."
+                    ".$value->nombre_empresa."
                 </td>
                 <td>
                     ".$texto."

@@ -6,7 +6,6 @@ if(isset ($_SESSION['USUARIO'])){ ?>
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="<?= URL ?>/public/css/font-awesome.css">
     <link rel="stylesheet" href="<?= URL ?>/public/css/bootstrap-yeti.css">
     <link rel="stylesheet" href="<?= URL ?>/public/css/custom.css">
 </head>
@@ -14,6 +13,7 @@ if(isset ($_SESSION['USUARIO'])){ ?>
 <body>
    <input id="carga" type="hidden" value="<?= $_SESSION['LOCAL']?>">
    <input id="org" type="hidden" value="<?= $_SESSION['RESPUESTA']?>">
+   <input id="user_log" type="hidden" value="<?= $_SESSION['USUARIO']?>">
     <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
@@ -59,16 +59,13 @@ if(isset ($_SESSION['USUARIO'])){ ?>
                     <a id="carteras" href="#"><i class="fa fa-money fa-2x"></i> Cartera</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-shopping-cart fa-2x"></i> Compras</a>
+                    <a id="compras" href="#"><i class="fa fa-shopping-cart fa-2x"></i> Compras</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-book fa-2x"></i> Pedidos</a>
+                    <a id="pedidos" href="#"><i class="fa fa-book fa-2x"></i> Pedidos</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fa fa-edit fa-2x"></i> Forms </a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa fa-edit fa-2x"></i> Rutas </a>
+                    <a id="rutas" href="#"><i class="fa fa-edit fa-2x"></i> Rutas </a>
                 </li>
             </ul>
 

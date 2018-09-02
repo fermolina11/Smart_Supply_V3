@@ -52,7 +52,7 @@
                         <option value="">Seleccione</option>
                         <?php foreach($proveedores as $value): ?>
                         <option value="<?= $value->id_proveedor ?>">
-                            <?= $value->nombre_proveedor ?>
+                            <?= $value->nombre_empresa ?>
                         </option>
                         <?php endforeach ?>
                     </select>
@@ -83,7 +83,7 @@
                         <option value="">Seleccione</option>
                         <?php foreach($proveedores as $value): ?>
                         <option value="<?= $value->id_proveedor ?>">
-                            <?= $value->nombre_proveedor ?>
+                            <?= $value->nombre_empresa ?>
                         </option>
                         <?php endforeach ?>
                     </select>

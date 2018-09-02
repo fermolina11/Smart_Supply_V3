@@ -1,5 +1,23 @@
 var limite;
-$(traer(),mostrar());
+$(traer(),mostrar(),menus());
+
+function menus(){
+    if($('#user_log').val() == 1){
+        
+    }else if ($('#user_log').val() == 2){
+        $('#clientes').hide();
+        $('#usuarios').hide();
+        $('#rutas').hide();
+        $('#carteras').hide();
+    }else if($('#user_log').val() == 3){
+        $('#compras').hide();
+        $('#usuarios').hide();
+        $('#rutas').hide();
+        $('#carteras').hide();
+        $('#proveedores').hide();
+        $('#productos').hide();
+    }
+}
 
 function traer(){
     if($('#carga').val() == "1"){
@@ -23,11 +41,15 @@ $(document).on('click','#clientes', function(){
     $('#contenido').html("");
 });
 
+$(document).on('click','#proveedores', function(){
+    $('#contenido').html("");
+    $('#contenido').load(uri + '/Proveedor/index');
+});
+
 $(document).on('click','#productos', function(){
     $('#contenido').html("");
     $('#contenido').load(uri + '/Producto/index');
     buscar_detalle();
-    
 });
 
 $(document).on('click','#carteras', function(){
