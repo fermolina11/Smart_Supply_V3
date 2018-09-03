@@ -22,7 +22,14 @@ function menus(){
 function traer(){
     if($('#carga').val() == "1"){
         $('#contenido').html("");
+        buscar_producto();
         $('#contenido').load(uri + '/Producto/index');
+
+    } else if($('#carga').val() == "2"){
+        $('#contenido').html("");
+        buscar_proveedor();
+        $('#contenido').load(uri + '/proveedor/index');
+
     }
 }
 
@@ -44,6 +51,7 @@ $(document).on('click','#clientes', function(){
 $(document).on('click','#proveedores', function(){
     $('#contenido').html("");
     $('#contenido').load(uri + '/Proveedor/index');
+    buscar_proveedor();
 });
 
 $(document).on('click','#productos', function(){

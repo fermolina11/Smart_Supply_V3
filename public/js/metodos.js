@@ -1,6 +1,7 @@
 var id;
 var proveedores;
 var contador = 0;
+var respuestas = "";
 
 //Movimientos
 function buscar_movimientos(consulta, consulta2) {
@@ -431,7 +432,7 @@ function consultar_usuario(consulta, consulta2) {
         })
         .done(function (respuesta) {
             if (respuesta == "usuario incorrecto") {
-                mensaje =respuesta;
+                mensaje = respuesta;
                 ver_fail();
             } else {
                 window.location = uri + '/Login/menu';
@@ -452,6 +453,81 @@ function cerrar() {
         .done(function (respuesta) {
             if (respuesta == "Se cerro") {
                 window.location = uri + '/Login/index';
+            }
+        })
+        .fail(function () {
+            console.log("error");
+        });
+}
+
+//Proveedores
+function buscar_proveedor(consulta) {
+    $.ajax({
+            url: uri + '/proveedor/tabla',
+            type: 'POST',
+            dataType: 'html',
+            data: {
+                nombre: consulta
+            },
+        })
+        .done(function (respuesta) {
+            $('#datos_proveedor').html(respuesta);
+        })
+        .fail(function () {
+            console.log("error");
+        });
+}
+
+function editar_proveedor(consulta) {
+    $.ajax({
+            url: uri + '/proveedor/editar',
+            type: 'POST',
+            data: {
+                id: consulta
+            },
+        })
+        .done(function (respuesta) {
+            var contenido = jQuery.parseJSON(respuesta);
+            $('#id_proveedor').val(contenido.id_proveedor);
+            $('#nombre_em').val(contenido.nombre_empresa);
+            $('#nombre_con').val(contenido.nombre_contacto);
+            $('#tipo_doc').val(contenido.tipo_documento);
+            $('#num_doc').val(contenido.numero_documento);
+            $("#dc").val(contenido.direccion);
+            $("#tel").val(contenido.telefono);
+            $("#cel").val(contenido.celular);
+            buscar_proveedor($('#nombre_em').val());
+        })
+        .fail(function () {
+            console.log("error");
+        });
+}
+
+function cambiar_proveedor(consulta, consulta2) {
+    $.ajax({
+            url: uri + '/proveedor/estado_proveedor',
+            type: 'POST',
+            dataType: 'html',
+            data: {
+                id: consulta,
+                estado: consulta2
+            },
+        })
+        .done(function (respuesta) {
+            if (respuesta == "si") {
+                mensaje = "Estado de la categoria cambiado correctamente";
+                ver_success();
+
+                var buscar = $('#nombre_em').val();
+
+                if (buscar != "") {
+                    buscar_proveedor(buscar);
+                } else {
+                    buscar_proveedor();
+                }
+            } else {
+                mensaje = "Error al cambiar el estado";
+                ver_fail();
             }
         })
         .fail(function () {

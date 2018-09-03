@@ -2,7 +2,8 @@
 #crear_detalle,
 #modificar_c,
 #modificar_p,
-.alert{
+.alert,
+#modificar_proveedor{
     display: none;
 }
 

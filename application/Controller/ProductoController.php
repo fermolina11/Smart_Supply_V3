@@ -14,6 +14,7 @@ class ProductoController {
         $categoria = new Categoria();
         $categoria->__SET("nombre_c", "");
         $lista = $categoria->Listar_categoria();
+        $proveedor->__SET("nombre_empresa","");
         $proveedores = $proveedor->listar();
         
         require APP.'view/Productos.php';

@@ -48,7 +48,7 @@ $(document).on('change', '#producto_mov,#tipo', function () {
     var valor2 = $('#producto_mov').val();
 
     if (valor != "" || valor2 != "") {
-        buscar_categoria(valor,valor2);
+        buscar_categoria(valor, valor2);
     } else {
         buscar_categoria();
     }
@@ -85,6 +85,17 @@ $(document).on('keyup', '#nombre_d', function () {
         buscar_detalle(valor, valor2);
     } else {
         buscar_detalle();
+    }
+});
+
+//buscar proveedor
+$(document).on('keyup', '#nombre_em', function () {
+    var valor = $('#nombre_em').val();
+
+    if (valor != "") {
+        buscar_proveedor(valor);
+    } else {
+        buscar_proveedor();
     }
 });
 
@@ -329,18 +340,49 @@ $(document).on('click', '#limpiar_c', function () {
 });
 
 //Movimientos
-$(document).on('click', '#guardar_mv', function(){
-    
+$(document).on('click', '#guardar_mv', function () {
+
+});
+
+//Form proveedores
+$(document).on('click', '#Estado_proveedor', function () {
+    var valor = $(this).val();
+    var estado = $(this).html();
+    var cambio;
+
+    if (estado == "Inhabilitar") {
+        cambio = 0;
+    } else {
+        cambio = 1;
+    }
+    cambiar_proveedor(valor, cambio);
+
+    return false;
+});
+
+$(document).on('click', '#editar_proveedor', function () {
+    editar_proveedor($(this).val());
+    $('#guardar_proveedor').hide();
+    $('#modificar_proveedor').show();
+    return false;
+});
+
+$(document).on('click', '#cancelar_mod', function () {
+    $('#modificar_proveedor').hide();
+    $('#guardar_proveedor').show();
+    $('#registro_pre').trigger("reset");
+    buscar_proveedor();
+    return false;
 });
 
 //Login
 $(document).on('click', '#entrar', function () {
     var dato = $('#user').val();
     var dato2 = $('#key').val();
-    
-    if(dato != "" && dato2 != ""){
-    consultar_usuario(dato,dato2);
-    }else {
+
+    if (dato != "" && dato2 != "") {
+        consultar_usuario(dato, dato2);
+    } else {
         mensaje = "debe ingresar todos los datos";
         ver_fail();
     }

@@ -94,7 +94,7 @@ class DetalleController {
         $p = $detalle->listar_detalle();
         
         foreach($p as $valor){
-        $html.="<li>*".$valor->nombre_proveedor."</li>";
+        $html.="<li>*".$valor->nombre_empresa."</li>";
         }
         }
         

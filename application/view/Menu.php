@@ -107,10 +107,6 @@ if(isset ($_SESSION['USUARIO'])){ ?>
         </div>
         <!-- /. PAGE WRAPPER  -->
     </div>
-    
-    <form action="">
-        <input type="submit" value="mirar" formaction="<?= URL ?>/Login/prueba2">
-    </form>
 </body>
 
 </html>
