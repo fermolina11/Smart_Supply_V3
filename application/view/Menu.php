@@ -8,11 +8,16 @@ if(isset ($_SESSION['USUARIO'])){ ?>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="<?= URL ?>/public/css/bootstrap-yeti.css">
     <link rel="stylesheet" href="<?= URL ?>/public/css/custom.css">
+    <link rel="stylesheet" href="<?= URL ?>/public/css/alerta.css">
 </head>
     
 <body>
    <input id="carga" type="hidden" value="<?= $_SESSION['LOCAL']?>">
-   <input id="org" type="hidden" value="<?= $_SESSION['RESPUESTA']?>">
+   <?php if(isset($_SESSION['RESPUESTA'])): ?>
+   <input type="hidden" id ="org" value="<?= $_SESSION['RESPUESTA']?>">
+   <?php else: ?>
+   <input type="hidden" id ="org" value="">
+   <?php endif; ?>
    <input id="user_log" type="hidden" value="<?= $_SESSION['USUARIO']?>">
     <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
         <div class="navbar-header">

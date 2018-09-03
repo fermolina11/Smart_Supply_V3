@@ -11,7 +11,13 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="popupunder alert alert-success fade in"><button type="button" class="close close-sm" data-dismiss="alert"><i class="glyphicon glyphicon-remove"></i></button><strong>Success : </strong> The update process has been completed successfull!</div>
+            <div class="popupunder alert alert-success fade in"><strong>Success : </strong> The update process has been completed successfull!</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="popupunder alert alert-fail fade in"><strong>Success : </strong> The update process has been completed successfull!</div>
         </div>
     </div>
 
