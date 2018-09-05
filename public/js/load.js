@@ -65,3 +65,9 @@ $(document).on('click','#carteras', function(){
     $('#contenido').load(uri + '/cartera/index');
     buscar_detalle();
 });
+
+$(document).on('click','#pedidos', function(){
+    $('#contenido').html("");
+    $('#contenido').load(uri + '/Pedido/index');
+    
+});

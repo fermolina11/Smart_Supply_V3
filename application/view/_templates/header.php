@@ -9,6 +9,7 @@
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link rel="stylesheet" href="<?= URL ?>/public/css/style.css">
     <link rel="stylesheet" href="<?= URL ?>/public/css/alerta.css">
+    
 </head>
 
 <body>
